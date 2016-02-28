@@ -86,8 +86,11 @@
 			    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
 
 			    <!-- lightgallery plugins -->
-			    <script src="js/lg-thumbnail.min.js"></script>
-			    <script src="js/lg-fullscreen.min.js"></script>
+			    <script src="js/lg-thumbnail.js"></script>
+			    <script src="js/lg-fullscreen.js"></script>
+			    <script src="js/lg-autoplay.js"></script>
+			    <script src="js/lg-video.js"></script>
+			    <script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
 
 			    <!-- Call filter-search -->
 			    <script src="js/filter-search.js"></script>
@@ -95,7 +98,13 @@
 			    <!-- Call the plugin -->
 			    <script type="text/javascript">
 			        $(document).ready(function() {
-			            $("#lightgallery").lightGallery(); 
+			            $("#lightgallery").lightGallery({
+			            	loadYoutubeThumbnail: true,
+						    youtubeThumbSize: 'default',
+						    loadVimeoThumbnail: true,
+						    vimeoThumbSize: 'thumbnail_medium'
+			            }); 
+
 			        });
 			    </script>
 
